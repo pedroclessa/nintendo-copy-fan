@@ -1,0 +1,274 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 25px;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+nav {
+    margin-top: -20px; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul {
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+}
+
+.swiper {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    margin: 100px auto; 
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    color: black;
+}
+
+.container {
+    text-align: left;
+    padding: 0 0; 
+    padding-left: 0; /
+}
+
+.container h1 {
+    color: red;
+    margin: 0; 
+    margin-left: 40px; 
+}
+
+.swiper-button-prev{
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .container h1 {
+        margin-left: -1rem; 
+    }
+}
+
+@media (min-width: 601px) {
+    .container h1 {
+        margin-left: -2rem;
+    }
+}
+
+.swiper h1{
+    margin: 0px 20;
+    text-align: center;
+    color: red;
+}
+
+.container p{
+    margin-top: auto;
+    margin-left: -30px;
+}
+
+.divider {
+    border: none; 
+    height: 1px; 
+    background-color: black;
+    margin: 100px 100px 100px;
+}
+
+.container img{
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+p {
+    text-indent: 50px;
+}
+
+@media (max-width: 600px) {
+    .container switch {
+        margin-left: -1rem;
+    }
+}
+
+@media (min-width: 601px) {
+    .container switch {
+        margin-left: -2rem;
+    }
+}
+
+.Serviços h1 {
+    margin: 70px 20px; /* Ajuste a margem inferior para diminuir o espaço */
+    text-align: center;
+    color: red;
+}
+
+.Cards {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Alinhamento dos cards na parte superior */
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permitir que os cards se movam para a próxima linha em telas menores */
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#fff, #fff);
+    transition: all .5s;
+    height: 400px;
+}
+
+.card:hover {
+    background-image: linear-gradient(#fff, red);
+}
+
+.card .img {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Diminuindo a altura da imagem */
+    background-image: url(nintendo-switch-logo-38D4F5C7E7-seeklogo.com.png);
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+}
+
+/* Removendo a animação de aproximação da imagem */
+.card:hover .img {
+    /* width: 430px; */
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .content {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card:hover .content {
+    height: 260px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
+    margin: 0;
+}
+
+.card .content .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card .content .desc {
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+}
+
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 24px;
+}
+
+@media (max-width: 800px) {
+    .Cards {
+        flex-direction: column; /* Muda para coluna em telas pequenas */
+        align-items: center; /* Centraliza os cards */
+    }
+}
