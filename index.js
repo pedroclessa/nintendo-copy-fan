@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.swiper', {
-        direction: 'vertical',
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
+    var swiper = new Swiper('.swiper', {
+        slidesPerView: 1,         /* Exibe um slide por vez */
+        spaceBetween: 10,         /* Espaçamento entre os slides */
+        loop: true,               /* Habilita o looping de slides */
+        navigation: {             /* Navegação com botões */
             nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            prevEl: '.swiper-button-prev'
         },
-        scrollbar: {
-            el: '.swiper-scrollbar',
+        pagination: {             /* Paginação (se necessário) */
+            el: '.swiper-pagination',
+            clickable: true
         },
+        resizeObserver: true,     /* Ativa o ajuste dinâmico de layout */
+        preloadImages: true,      /* Garante que as imagens sejam carregadas antes da navegação */
     });
 });
